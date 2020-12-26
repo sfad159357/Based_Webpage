@@ -1,0 +1,274 @@
+// color
+$white: #f2f6f6
+$red: #e72243
+$yellow_light: #ecc339
+$yellow: #f5b132
+$cyan:#36b9c1
+$blue: #3344ff
+$grey:  #3e3a39
+$black:  #111111
+
+// font setting
+$font_base_size: 10px
+$font_family: 'Oswald', sans-serif
+$letter_spacing: 2px
+
+// max width
+$max_content_width: 768px
+
+// line width
+$base_line_width: 4px
+
+// break width
+$large: 1024px // 筆電
+$medium: 768px // 平板
+$small: 400px // 手機
+
+@mixin block($width:100px,$height:100px,$color:black)
+	width: $width
+	height: $height
+	border: solid 2px $color
+
+@mixin text($size:20px, $color:black, $spacing:2px)
+	font-size: $size
+	color: $color !important
+	letter-spacing: $spacing
+
+@mixin size($width, $height)
+	width: $width
+	height: $height
+
+@mixin fill
+	width: 100%
+	height: 100%
+
+@mixin center
+	position: absolute
+	left: 50%
+	top: 50%
+	transform: translateX(-50%) translateY(-50%)
+
+html,body
+	+size(100%,100%)
+	display: flex
+	justify-content: center
+	background-color: $black
+div
+	// border: 1px solid $black
+label
+	cursor: pointer
+
+.daybox
+	+size(450px,600px)
+	background-color: $black
+
+	&:hover
+		.bottom
+			height: 120px
+		.day
+			.weather
+				top: -5%
+				opacity: 1
+		.day:nth-child(1)
+			.weather
+				transition-delay: 0s
+		.day:nth-child(2)
+			.weather
+				transition-delay: 0.2s
+		.day:nth-child(3)
+			.weather
+				transition-delay: 0.4s
+		.day:nth-child(4)
+			.weather
+				transition-delay: 0.6s
+		.day:nth-child(5)
+			.weather
+				transition-delay: 0.8s
+		.day:nth-child(6)
+			.weather
+				transition-delay: 1s
+		.day:nth-child(7)
+			.weather
+				transition-delay: 1.2s
+
+.top
+	border-radius: 10px 10px 0px 0px
+	+size(100%,75%)
+	position: relative
+	box-sizing: border-box
+	background: linear-gradient(20deg,#4dacff, #1d678f)
+
+.polyline
+	stroke: black
+	stroke-width: 0.5px
+	fill: none
+	opacity: 0.2
+
+	circle
+		fill: black
+		opacity: 0.2
+	text
+		transform: translateX(-1px) translateY(10px)
+		font-size: 5px
+		stroke: $black
+		font-weight: 200
+		opacity: 0
+		transition-duration: 2s
+
+.moon
+	+size(15%,15%)
+	position: absolute
+	top: 40%
+	left: 10%
+	border-radius: 100%
+	box-shadow: 50% -50%
+	animation: moonMove 20s infinite linear
+	transition: 1s
+
+	@keyframes moonMove
+		0%
+			transform: translateX(-40px) translateY(30px)
+			box-shadow: 40px -30px yellow
+		100%
+			transform: translateX(40px) translateY(-30px)
+			box-shadow: -40px 30px yellow
+
+.cloud
+	+size(120px,40px)
+	position: absolute
+	bottom: 20%
+	left: 60%
+	border-radius: 20px
+	background-color: #ddd
+	animation: cloudWave 10s infinite linear
+	transition: 1s
+
+	&:before,&:after
+		position: absolute
+		content: ""
+		display: block
+		border-radius: 100%
+		background-color: #ddd
+	&::before
+		+size(50px, 50px)
+		bottom: 60%
+		left: 15%
+	&::after
+		+size(45px, 45px)
+		bottom: 45%
+		left: 45%
+
+	@keyframes cloudWave
+		0%
+			bottom: 18%
+		50%
+			bottom: 20%
+		100%
+			bottom: 18%
+
+.rain
+	+size(1px,15px)
+	border: 2px solid $cyan
+	background-color: $cyan
+	position: absolute
+	border-radius: 30%
+	left: 20%
+	animation: raindrop 1s infinite  linear
+
+	@keyframes raindrop
+		0%
+			top: 50%
+			opacity: 0
+		30%
+			opacity: 1
+		100%
+			top: 180%
+			opacity: 0
+
+	&.rain2
+		left: 50%
+		animation-delay: -0.3s
+	&.rain3
+		left: 75%
+		animation-delay: -0.6s
+
+.temp
+	position: absolute
+	bottom: 20%
+	+size(40%,20%)
+	font-size: 60px
+	text-align: center
+
+.info
+	position: absolute
+	bottom: 0%
+	+size(40%,20%)
+	line-height: 5px
+	text-align: center
+	h4
+		font-weight: 300
+
+.bottom
+	display: flex
+	height: 10px
+	justify-content: center
+	background: linear-gradient(0deg, #a375a3,#f5dbf3)
+	overflow: hidden
+	border-radius: 0px 0px 10px 10px
+	transition-duration: 1s
+
+	.day
+		+size(60px, 150px)
+		opacity: 1
+
+		.weekDay
+			position: relative
+			+size(100%, 30%)
+			top: 10px
+			text-align: center
+
+		.weather
+			+size(100%, 30%)
+			position: relative
+			opacity: 0
+			top: 10%
+			transition-duration: 2s
+			transition-delay: 0s
+
+			.cloud
+				left: -35px
+				transform: translateY(20px) scale(0.35)
+
+				&.suncloud
+					transform: translateY(30px) scale(0.35)
+
+			svg // viewbox設定
+				position: relative
+				border-radius: 100%
+				stroke: $black
+				stroke-width: 1px
+
+				&.sun
+					fill: #f8b806f8
+					stroke-dasharray: 4.5px
+					stroke: rgba(#f8b806f8, 0.4)
+					stroke-width: 30px
+					animation: sunSpin 20s infinite linear
+
+				@keyframes sunSpin
+					0%
+						transform: rotate(0deg)
+					50%
+						transform: rotate(180deg)
+					100%
+						transform: rotate(360deg)
+#switch
+	display: none
+#switch:checked+.top
+	.moon, .cloud
+		opacity: 0.2
+	.polyline
+		opacity: 1
+		circle, text
+			opacity: 1
+.cloud, .moon

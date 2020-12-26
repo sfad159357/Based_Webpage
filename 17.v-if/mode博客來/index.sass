@@ -1,0 +1,125 @@
+// color
+$white: #f2f6f6
+$red: #e72243
+$yellow_light: #ecc339
+$yellow: #f5b132
+$cyan:#36b9c1
+$blue: #3344ff
+$grey:  #3e3a39
+$black:  #111111
+
+// font setting
+$font_base_size: 10px
+$font_family: 'Oswald', sans-serif
+$letter_spacing: 2px
+
+// max width
+$max_content_width: 768px
+
+// line width
+$base_line_width: 4px
+
+// break width
+$break_large: 1024px // 筆電
+$break_medium: 768px // 平板
+$break_small: 400px // 手機
+
+@mixin block($width:100px,$height:100px,$color:black)
+	width: $width
+	height: $height
+	border: solid 2px $color
+
+@mixin text($size:20px, $color:black, $spacing:2px)
+	font-size: $size
+	color: $color !important
+	letter-spacing: $spacing
+
+@mixin size($width, $height)
+	width: $width
+	height: $height
+
+@mixin fill
+	width: 100%
+	height: 100%
+
+@mixin center($left: 50%, $top: 50%, $X:-50%, $Y:-50%)
+	position: absolute
+	left: $left
+	top: $top
+	transform: translate($X, $Y)
+
+*
+
+html,body
+	background-color: #111
+	color: $white
+	padding: 2%
+
+
+.bkl_icon
+	width: 50px
+
+.book
+	width: 185px
+	padding: 10px
+	text-align: center
+	border: 1px solid #ddd
+	img
+		width: 100%
+.bookname
+	font-size: 18px
+	padding: 10px
+	line-height: 25px
+	a
+		color: white
+
+h4
+	font-size: 16px
+	font-weight: normal
+	margin: 0px
+	color: #ccc
+	justify-content: end
+	a
+		color: #ccc
+
+.red
+	color: #d93800
+	font-weight: 900
+
+.book
+	display: grid
+	img
+		grid-row-start: 1
+		grid-row-end: 5
+		
+		
+.book.detail
+	display: block
+	width: 80%
+	text-align: left
+	img
+		width: 20%
+		display: inline-block
+		vertical-align: middle
+
+	.info
+		display: inline-block
+		padding: 5%
+		vertical-align: middle
+		.bookname
+			padding: 0%
+
+.big
+	width: 25%
+
+.detail.big
+	.info
+		width: 60%
+	img
+		width: 30%
+	h4
+		line-height: 40px
+
+.detail.small
+	.info
+		width: 60%

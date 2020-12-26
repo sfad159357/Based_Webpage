@@ -1,0 +1,294 @@
+// 配色
+$color_blue: #282f44 
+$color_brown: #e6af2e 
+$color_yellow: #f5d061 
+$color_white: #ececec
+
+// 函式
+@mixin center($left: 50%, $bottom: 50%, $X: -50%, $Y: -50%)
+    left: $left
+    bottom: $bottom
+    transform: translate($X, $Y)
+    position: absolute
+@mixin ab_center
+  position: absolute
+  left: 50%
+  top: 50%
+  transform: translate(-50%,-50%)
+
+@mixin size($w,$h)
+  width: $w
+  height: $h
+
+// 主體CSS
+
+html,body
+    width: 100%
+    // 超過螢幕大小就隱藏起來
+    overflow-x: hidden
+
+// 要只抓nav.navbar才能存取整條nav
+
+h2
+    padding: 100px 0px 30px 50px
+
+
+header
+    background-color: $color_blue
+    padding: 250px 0px
+    position: relative
+    .container
+        width: 250px
+    .explore
+        color: $color_brown
+        +center($bottom: 0%)
+        transition: 1s
+        opacity: 1
+        span
+            display: block
+            text-align: center
+            line-height: 7px
+            font-size: 5px
+            transform: scaleX(1.5) scaleY(0.8) translateY(10px)
+            animation: blink 2s infinite
+       
+    .bottom
+        bottom: 0%
+        position: absolute
+        
+@keyframes blink
+    0%
+        opacity: 1
+    50%
+        opacity: 0
+    100%
+        opacity: 1   
+
+nav.navbar.navbar-dark
+    transition: 1s
+    // border-bottom:  1px solid $color_white
+    a   
+        color: $color_yellow
+    #navbarNav
+        a
+            color: $color_yellow
+            font-family: 'Montserrat'
+            font-size: 15px
+            font-weight: 500
+            &:hover
+                color: darken($color_brown, 10)
+section
+    overflow: hidden
+    position: relative
+
+section#section_about
+    background-color: $color_brown
+    position: relative
+
+
+
+.tri
+    transform: rotate(-15deg)
+.tri1
+    width: 60%
+.tri2
+    width: 20px
+    margin-left: 10%
+.tri3
+    width: 100px
+    margin-left: 70%
+.tri4
+    width: 70px
+    // margin-left: 20%
+.tri5
+    width: 80px
+    margin-left: 20%
+
+a.btn
+    margin-left: 20%
+#cat
+    width: 30%
+    position: absolute
+    bottom: 0%
+    right: 0%
+
+#cross
+    position: absolute
+    &:before,&:after
+        content: ""
+        display: block
+        width: 60px
+        height: 15px
+        background-color: #fff
+        position: absolute
+        left: 50%
+        top: 50%
+        transform: translate(-50%,-50%) rotate(45deg)
+    &:after
+        transform: translate(-50%,-50%) rotate(136deg)
+
+.margin_service
+    transform: translateY(-2px)
+    position: absolute
+    
+
+section#section_service
+    background-color: $color_white
+    position: relative
+
+
+.allService
+    display: flex
+    // height: 400px
+
+.service
+    margin: 5%
+    width: 100%
+    img
+        width: 100%
+        margin-bottom: 5%
+    p
+        font-size: 20px
+        text-align: center
+        color: $color_brown
+
+
+section#section_works
+    background-color: $color_white
+   
+          
+.block, .block2
+    height: 400px
+    width: 100%
+    background-color: grey
+    color: white
+    border: 1px solid white
+    // 假裝父元素是表格，就能使用垂直置中
+    display: table
+    text-align: center
+    &:hover
+        transition: 0.3s
+        background-color: #333
+    p
+        // 欲垂直置中的元素假裝為表格格子
+        display: table-cell
+        // 垂直置中
+        vertical-align: middle
+
+.block2
+    height: 200px
+    width: 50%
+
+section#section_contact
+    background-color: $color_blue
+    position: relative
+    h2
+        color: $color_white
+
+.margin_contact
+    position: absolute
+
+#letter
+    width: 100%
+    transform: rotate(-5deg) translateX(-3%) translateY(-5%)
+
+.block_form
+    height: 450px
+    
+.form
+    width: 90%
+    height: 450px
+    position: absolute
+    background-color: #fff
+    top: 10%
+    padding: 5%
+
+.info
+    padding-left: 5%
+    padding-top: 2%
+    font-size: 20px
+    color: $color_white
+
+.send
+    position: absolute
+    right: 5%
+    background-color: $color_blue
+    color: $color_white
+
+#contact_info
+    color: $color_brown
+
+.input,textarea
+        width: 100%
+textarea
+    height: 100px
+
+footer
+  position: relative
+  background-color: $color_brown
+  text-align: center
+  
+  .icon
+    width: 80%
+    max-width: 250px
+    padding: 80px 0px
+
+// RWD
+
+@media screen and ( max-width: 768px )
+    #about
+        height: 700px
+    .col-12.col-md-6
+        img#letter
+            transform: rotate(-5deg) translateY(10%)
+            width: 90%
+    
+    #service
+        height: 80%
+    .allService
+        display: block
+    .service
+        margin-left: 10%
+        margin-bottom: 0%
+        width: 80%
+        height: 10%
+        padding: 0% 10%
+        h2
+            padding: 0px
+        img
+            margin-bottom: 1%
+            display: block
+            width: 100%
+        p
+            font-size: 30px
+    #contact
+        height: 50%
+
+    .form
+        position: absolute
+        width: 70%
+        height: 400px
+        left: 10%
+        background-color: #fff
+        top: 15%
+    .info
+        padding-top: 10%
+   
+    
+@media screen and ( max-width: 576px  )
+    #about
+        height: 800px
+    
+    .row1
+        height: 20%
+   
+        .block,.block2
+            width: 100%
+    #works
+        height: 100%
+    #service
+        height: 65%
+
+@media screen and ( max-width: 420px  )
+    #service
+        height: 53%

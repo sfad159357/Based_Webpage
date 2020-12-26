@@ -1,0 +1,161 @@
+$key_width: 44px
+$key_height: 300px
+$color_white: #fff
+$color_black: #222
+
+body
+  padding: 5%
+  background-color: #eee
+
+#app
+  display: flex
+  flex-flow: column
+  align-items: center
+
+h1
+  margin-bottom: 30px
+
+.notations
+  font-size: 20px
+  text-align: center
+
+  .notation
+    color: red
+
+  .change
+    margin: 10px
+    button
+      font-size: 10px
+      margin-left: 10px
+
+  .choose
+    display: inline-block
+    input
+      margin: 10px 
+      font-size: 20px
+      border-radius: 5px
+      background-color: #ffe
+      color: #222
+
+
+.keyboard
+  margin: 30px
+  position: relative
+
+.record
+  background-color: red
+  color: white
+  border-radius: 5px
+  font-size: 20px
+  padding: 3px
+  text-align: center
+  width: 100px
+  position: absolute
+  left: 40%
+  top: -4%
+  animation: blink 2s infinite
+
+    
+@keyframes blink
+  0%
+    opacity: 1
+  50%
+    opacity: 0.3
+  100%
+    opacity: 1
+
+.switch
+  button
+    margin-bottom: 5px
+.pianoKey
+  box-shadow: 10px 10px 10px 0px rgba(0,0,0,0.5)
+  display: inline-block
+  position: relative
+  vertical-align: top
+  cursor: pointer
+
+  .white
+    border: solid 1px #aaa
+    width: $key_width
+    height: $key_height
+    background-color: $color_white
+    position: relative
+    transition: 0.1s
+    &:hover
+      background-color: #eee
+
+    span
+      position: absolute
+      left: 40%
+      bottom: 0px
+
+  .black
+    border-top: solid 1px #222
+    background-color: $color_black
+    width: $key_width/2
+    height: $key_height*0.55
+    // 才能夠剛好被擠在兩白鍵中間
+    margin-left: -$key_width/4
+    margin-right: -$key_width/4
+    position: absolute
+    transition: 0.1s
+    z-index: 1
+    &:hover
+      background-color: #777
+
+    span
+      left: 30%
+      position: absolute
+      bottom: 0px
+      color: white
+      z-index: 2
+
+.play
+  text-align: center
+
+  button
+    margin: 10px
+    border-radius: 5px
+    font-size: 20px
+    transition: 0.3s
+    &:hover
+      filter: invert(100%)
+    
+    i
+      padding-right: 10px
+    
+
+hr
+  width: 100%
+  border: 1px solid black
+
+.display
+  
+  span
+    font-size: 30px
+    margin-right: 10px
+
+  button
+    padding: 5px 10px
+    font-size: 20px
+    vertical-align: top
+
+ul.notes
+  text-align: center
+  white-space:pre-wrap
+  &.none
+    display: none
+  li
+    padding: 10px
+    width:55px
+    border-right: 1px solid #999
+    font-weight: 300
+    font-size: 20px
+    display: inline-block
+    
+    &.playing
+      background-color: #ddd
+
+
+
+    

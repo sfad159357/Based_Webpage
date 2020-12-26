@@ -1,0 +1,172 @@
+@charset "UTF-8";
+* {
+  font-family: "Heiti TC", "HeitiTC-Light", "LiHei", "微軟正黑體", "Lato", "Verdana";
+  color: #4F4C4B;
+  vertical-align: top;
+  position: relative;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #f3f3f1;
+}
+
+.navbar {
+  height: 400px;
+  margin-bottom: 50px;
+  background: linear-gradient(-45deg, #FFE18D 50%, #FFDA71 50%);
+  background-size: 50px 50px;
+  display: flex;
+  justify-content: center;
+}
+.navbar img {
+  width: 700px;
+}
+
+@media screen and (max-width: 768px) {
+  .navbar {
+    height: 80%;
+  }
+  .navbar img {
+    width: 90%;
+  }
+}
+#app {
+  padding-left: 5%;
+}
+
+.classBox {
+  width: 260px;
+  background-color: #fff;
+  color: #4F4C4B;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 15px 30px;
+  display: inline-block;
+  box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.5);
+}
+.classBox:hover .bookBtn {
+  bottom: 10px;
+}
+.classBox:hover .classPicture {
+  transform: scale(1.15);
+}
+.classBox:hover .bottom .progressBar .valueBar {
+  width: 200px;
+}
+.classBox .teacher {
+  width: 55px;
+  height: 55px;
+  position: absolute;
+  left: 15px;
+  top: -27.5px;
+  border-radius: 50%;
+  background-image: url("https://hahow.in/images/57ab3d5585b097070042067a");
+  background-size: cover;
+  border: solid 2px white;
+  z-index: 1;
+}
+
+.top {
+  height: 160px;
+  overflow: hidden;
+}
+.top .classPicture {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-image: url("https://hahow.in/images/574fab4f206cd60900c52a67?width=300");
+  background-size: cover;
+  transition: 0.3s;
+  border-radius: 5px 5px 0px 0px;
+}
+.top .tag {
+  padding: 5px 0px;
+  text-align: center;
+  transform: rotate(45deg) translateX(80px) translateY(-60px);
+  background-color: #EB5E00;
+  color: white;
+  font-weight: 700;
+  box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.5);
+}
+.top .bookBtn {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  position: absolute;
+  left: 15px;
+  bottom: -50px;
+  background-color: #fff;
+  cursor: pointer;
+  transition: bottom 0.2s;
+  box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.5);
+}
+.top .bookBtn:hover {
+  background-color: #EB5E00;
+}
+.top .bookBtn:hover i {
+  color: white;
+}
+.top .bookBtn i {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 22px;
+  color: #EB5E00;
+}
+
+.bottom {
+  height: 184px;
+  padding: 15px;
+}
+.bottom .classTitle {
+  font-size: 25px;
+}
+.bottom .text {
+  font-size: 15px;
+  letter-spacing: 1px;
+}
+.bottom .text .priceRow {
+  margin-bottom: 10px;
+}
+.bottom .text .priceRow .lastDay {
+  position: absolute;
+  right: 0px;
+  top: 0px;
+}
+.bottom .text .progressBar {
+  height: 10px;
+  margin-bottom: 10px;
+  background-color: #e0e0db;
+  border-radius: 5px;
+  overflow: hidden;
+}
+.bottom .text .progressBar .valueBar {
+  height: 100%;
+  width: 150px;
+  transition: 0.2s;
+  background-color: #FA8B00;
+}
+.bottom .text .nowPeople {
+  text-align: center;
+}
+
+span.ora {
+  padding-left: 5px;
+  color: #FA8B00;
+}
+
+.orangeBar {
+  height: 10px;
+  width: 100%;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  background-color: #EB5E00;
+  border-radius: 0px 0px 5px 5px;
+}

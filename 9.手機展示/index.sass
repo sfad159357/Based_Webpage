@@ -1,0 +1,177 @@
+// color
+$white: #f2f6f6
+$red: #e72243
+$yellow_light: #ecc339
+$yellow: #f5b132
+$cyan:#36b9c1
+$blue: #3344ff
+$grey:  #3e3a39
+$black:  #111111
+
+// font setting
+$font_base_size: 10px
+$font_family: 'Oswald', sans-serif
+$letter_spacing: 2px
+
+// max width
+$max_content_width: 768px
+
+// line width
+$base_line_width: 4px
+
+// break width
+$large: 1024px // 筆電
+$medium: 768px // 平板
+$small: 400px // 手機
+
+@mixin block($width:100px,$height:100px,$color:black)
+	width: $width
+	height: $height
+	border: solid 2px $color
+
+@mixin text($size:20px, $color:black, $spacing:2px)
+	font-size: $size
+	color: $color !important
+	letter-spacing: $spacing
+
+@mixin size($width, $height)
+	width: $width
+	height: $height
+
+@mixin fill
+	width: 100%
+	height: 100%
+
+@mixin center
+	position: absolute
+	left: 50%
+	top: 50%
+	transform: translate(-50%, -50%)
+
+html,body
+	+size(100%,100%)
+	background-color: $black
+	flex-direction: column
+	display: flex
+	align-items: center
+	
+
+div
+	// border: 1px solid $black
+
+.frame
+
+.phone
+	position: relative
+	left: 0px
+	width: 250px
+	padding: 10px
+	border-radius: 10px
+	background-color: #eee
+	transition: 1s
+	margin-top: 5%
+	
+	
+
+.top
+	height: 50px
+	position: relative
+	.camera
+		+size(20px,20px)
+		+center
+		border-radius: 100%
+		background-color: $black
+.screen
+	height: 350px
+	transition: 1s
+	overflow: hidden
+	cursor: pointer
+	font-size: 0px // 為了讓page1,page2,page3之間不要有空白
+	white-space: nowrap // 才能使inline-block水平排列
+	.page
+		height: 100%
+		width: 100%
+		right: 0px
+		padding: 10px
+		box-sizing: border-box
+		display: inline-block
+		position: relative // 才能相對.screen上下左右移動
+		transition: 0.5s
+		background-color: #eb9234
+		font-size: 15px
+		h2
+			color: $white
+			margin: -2% 0px 15% 10px
+		.circle
+			+size(300px, 300px)
+			position: absolute
+			border-radius: 100%
+			bottom: -20%
+			right: -30%
+			background-color: #eba834
+			
+	.page2, .page3
+		&::after
+			display: block
+			padding: 10px
+			box-sizing: border-box
+			+size(100%, 80%)
+			transform: translate(-4%, -10%)
+			background-color: #555
+			content: "正如它的名字，這個屬性是用來控制空白字符的顯示的，同時還能控制是否自動換行。它有五個值：normal | nowrap | pre | pre-wrap | pre-line。因為默認是normal，所以我們主要研究下其它四種值時的展現情況。"
+			color: $white
+			line-height: 30px
+			white-space: normal // 讓裡面文字恢復換行
+			position: absolute // 為了不要讓其他page高度降低
+	
+	.page3
+		&::after
+			content:"從這個名字可以知道，這個屬性是控制單詞如何被拆分換行的。它有三個值：normal | break-all | keep-all。"
+		
+	
+.bottom
+	height: 60px
+	position: relative
+	.home
+		border: 1px solid #aaa
+		+size(40px,40px)
+		+center
+		border-radius: 100%
+		color: #aaa
+		text-align: center
+		line-height: 40px
+		cursor: pointer
+		&:hover
+			background-color: #aaa
+			color: $white
+
+.text
+	bottom: 22%
+	
+.text, .phone_name
+	color: $white
+	border: none
+	margin: 10px 0px 0px 0px
+	position: absolute
+	
+.phone_name
+	font-size: 30px
+	font-weight: bold
+	position: absolute
+	bottom: 15%
+.buttons
+	color: $white
+	cursor: pointer
+	margin-top: 20px
+	position: absolute
+	bottom: 7%
+	
+	h5,h4
+		border: 1px solid 
+		display: inline-block
+		padding: 10px 20px
+		margin: 0px 10px 0px 0px
+		
+		&:hover
+			background-color: #eee
+			color: $black

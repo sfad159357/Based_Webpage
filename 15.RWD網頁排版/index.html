@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="index.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald&amp;display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css"/>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-sm navbar-dark bg-dark fixed-top"><a href="#home" class="navbar-brand ml-auto">首頁</a>
+      <button type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler"><span class="navbar-toggler-icon"></span></button>
+      <div id="navbarNav" class="collapse navbar-collapse">
+        <div class="navbar-nav ml-auto"><a href="#a" class="nav-link">關於Redux <span class="sr-only">(current)</span></a><a href="#b" class="nav-link">開發工具</a><a href="#c" class="nav-link">React優點</a><a href="#d" class="nav-link">訂閱資訊</a></div>
+      </div>
+    </nav>
+    <header id="home">
+      <div class="container">
+        <h1 data-0="transform: translateY(-50px)" data-300="transform: translateY(100px)">React</h1>
+        <hr/>
+        <h4>用來實作使用者界面的 JavaScript 函式庫</h4>
+      </div>
+    </header>
+    <div id="a" class="section">
+      <div class="container">
+        <div class="row">
+          <div data-bottom-top="background-size: 130%;transform: translateX(-100px)" data-center="background-size: 100%;transform: translateX(0px)" class="col-sm-5"></div>
+          <div data-bottom-top="opacity: 0.5" data-center="opacity: 1" class="col-sm-7">
+            <h2>Redux</h2>
+            <ul>
+              <li> 
+                <h4>Predictable</h4>
+                <p>Redux helps you write applications that behave consistently, run in different environments (client, server, and native), and are easy to test.</p>
+              </li>
+              <li> 
+                <h4>Centralized</h4>
+                <p>Centralizing your application's state and logic enables powerful capabilities like undo/redo, state persistence, and much more.</p>
+              </li>
+              <li> 
+                <h4>Debuggable</h4>
+                <p>The Redux DevTools make it easy to trace when, where, why, and how your application's state changed. Redux's architecture lets you log changes, use "time-travel debugging", and even send complete error reports to a server.</p>
+              </li>
+              <li> 
+                <h4>Flexible</h4>
+                <p>Redux works with any UI layer, and has a large ecosystem of addons to fit your needs.</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="b" class="section">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-3 col-sm-6">
+            <div class="img a"></div>
+            <h4>Babel-轉譯工具</h4>
+            <p>Babel 是 JavaScript 轉譯器，可將 ES6+ 程式碼轉為等效的 ES5 程式碼，我們在撰寫程式時就可以使用新的語法特性來改善程式碼的品質，而不用刻意守在舊有的手法。在實際執行 JavaScript 程式時，則會以普遍受到支援的 ES5 來執行，不用考慮 ES6 實作不夠完整的議題。</p>
+            <p>ES6 的特性，那麼 Babel 專案就可以功成身退。但我們的專案並沒有白費，因為我們原本就是用 JavaScript 來寫程式，只是在版本間做了些轉換。</p>
+          </div>
+          <div class="col-lg-3 col-sm-6">
+            <div class="img b"></div>
+            <h4>Webpack-打包工具</h4>
+            <ul>以下這些是更現實的原因，你可能會需要使用 webpack:
+              <li>將你的 js 檔案 Bundle 變成單一的檔案</li>
+              <li>在你的前端程式碼中使用 npm packages</li>
+              <li>撰寫 JavaScript ES6 或 ES7（需要透過 babel 來幫助）</li>
+              <li>Minify 或優化程式碼</li>
+              <li>將 LESS 或 SCSS 轉換成 CSS</li>
+              <li>使用 HMR（Hot Module Replacement）</li>
+              <li>包含任何類型的檔案到你的 JavaScript</li>
+            </ul>
+          </div>
+          <div class="col-lg-3 col-sm-6">
+            <div class="img c"></div>
+            <h4>Node.js-開發環境</h4>
+            <p>"Node.js®" is a JavaScript runtime built on Chrome's V8 JavaScript engine.</p>
+            <p>Node.js 就是一個能執行 JavaScript 的環境，而 V8 則是主流瀏覽器 - Google Chrome 的 JavaScript 引擎，負責解析、執行 JavaScript，也就是負責實踐 ECMAScript 規範中定義的部份；另外，V8 是開源的專案，有興趣的讀者可以參照 Google Git - V8。</p>
+          </div>
+          <div class="col-lg-3 col-sm-6">
+            <div class="img d"></div>
+            <h4>Sass-Css預處理器</h4>
+            <p>Sass（Syntactically Awesome StyleSheets）是一種 CSS 的擴充，是為 CSS 的超集合（透過編譯會 compiled 成傳統 CSS，讓瀏覽器可以閱讀）。使用 Sass 的出現是為了解決在大型專案時傳統 CSS 會遇到的重複、可維護性差等問題（新增了 nested rules, variables, mixins, selector inheritance 等特性）。讓開發者可以撰寫簡潔、富語意（expressive）、重複性佳（reusable）、可維護性佳和可延展性佳的 CSS 程式碼。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="c" class="section">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-12 col-md-5 img"></div>
+          <div class="col-md-7">
+            <div class="col-md-12">
+              <h2>使用React好處</h2>
+              <hr/>
+            </div>
+            <div class="row">
+              <div class="col-sm-4"><i class="icon-cogs"></i>
+                <h4>元件化</h4>
+                <p>一個元件 (component) 是 React 中最小的單位，在 React 中所有的東西或介面都是由元件所組成，強調 UI 元件的封裝性、共用性、組合性及擴展性。</p>
+              </div>
+              <div class="col-sm-4"><i class="icon-eye-open"></i>
+                <h4>可預測的</h4>
+                <p>React 的資料架構設計概念是採「單向資料流」，資料的流向只能從父元件傳入子元件 (top-down)，而資料改變時會牽動 UI 自動改變，每當 React 偵測到 props 或 state 有更新時，就會自動重繪整個 UI 元件。你可以確定一個元件在某個資料狀態下的畫面一定會是長什麼樣子 (predictable)</p>
+              </div>
+              <div class="col-sm-4"><i class="icon-code"></i>
+                <h4>JSX語法</h4>
+                <p>React 提供了稱作 JSX 的語法，作為 JavaScript extension syntax，JSX 是一種跟 HTML 相似的語法，用來讓你方便地寫 UI 元件。</p>
+              </div>
+            </div>
+            <div class="col-sm-12">
+              <p>React（有時叫React.js或ReactJS），是一個為資料提供彩現為HTML視圖的開源JavaScript 庫。React視圖通常採用包含以自訂HTML標記規定的其他組件的組件彩現。React為程式設計師提供了一種子組件不能直接影響外層組件（"data flows down"）的模型，資料改變時對HTML文件的有效更新，和現代單頁應用中組件之間乾淨的分離。</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="d" class="footer">
+      <div data-bottom-top="opacity: 0.5" data-center="opacity: 1" class="container-fluid">
+        <h2>想了解關於更多react相關資訊嗎？</h2>
+        <input placeholder="請輸入你的Email" class="form-control"/>
+        <hr/>
+        <button class="btn btn-primary">訂閱資訊</button>
+      </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/skrollr/0.6.30/skrollr.min.js"></script>
+    <script src="index.dev.js"></script>
+  </body>
+</html>

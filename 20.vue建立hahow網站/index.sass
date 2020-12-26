@@ -1,0 +1,198 @@
+//顏色定義區(橘/灰/深橘)
+$color_orange: #FA8B00
+$color_grey: #f3f3f1
+$color_dark_orange: #EB5E00
+$color_yellow: #FFE18D
+$color_dark_yellow: #FFDA71
+$color_dark_grey: #4F4C4B
+
+//尺寸定義區 (標題/內文/書籤按鈕/書籤icon/老師icon)
+$size_title: 25px
+$size_para: 15px
+$size_bookbtn: 42px
+$size_icon: 22px
+$size_teacher: 55px
+
+//尺寸(課程/上下半部/進度條/預購價/底部橘條)
+$width_class: 260px
+$height_toppart: 160px
+$height_bottompart: 184px
+$height_progressbar: 10px
+$height_pricerow: 22px
+$height_bottomorange: 5px
+
+//尺寸(課程框框的padding)
+$padding_class: 15px
+
+//預設圖片Url
+$url_teacher: "https://hahow.in/images/57ab3d5585b097070042067a"
+$url_class: "https://hahow.in/images/574fab4f206cd60900c52a67?width=300"
+
+@mixin ab_center
+  position: absolute
+  left: 50%
+  top: 50%
+  transform: translate(-50%,-50%)
+
+@mixin size($w,$h)
+  width: $w
+  height: $h
+
+@mixin box_shadow
+    box-shadow: 0px 0px 12px rgba(0,0,0,0.5)
+
+
+
+*
+  // border: solid 1px 
+  font-family: "Heiti TC","HeitiTC-Light","LiHei","微軟正黑體","Lato","Verdana"
+  color: $color_dark_grey
+  vertical-align: top
+  position: relative
+
+
+
+html,body
+  margin: 0
+  padding: 0
+
+body
+  background-color: $color_grey
+
+.navbar
+  height: 400px
+  margin-bottom: 50px
+  background: linear-gradient(-45deg,$color_yellow 50%,$color_dark_yellow 50%)
+  background-size: 50px 50px
+  display: flex
+  justify-content: center
+  img
+    width: 700px
+
+@media screen and ( max-width: 768px  )
+  .navbar
+    height: 80%
+    img
+      width: 90%
+    
+
+#app
+  padding-left: 5%
+
+.classBox
+  width: $width_class
+  background-color: #fff
+  color: $color_dark_grey
+  border-radius: 5px
+  cursor: pointer
+  margin: 15px 30px
+  display: inline-block
+  +box_shadow
+  &:hover
+    .bookBtn
+      bottom: 10px
+    .classPicture
+      transform: scale(1.15)
+    .bottom .progressBar .valueBar // 這裡如果要顯示hover後的效果，必須多一些階層數，裡面的子階層才能被存取到
+      width: 200px
+  
+  .teacher
+      width: $size_teacher
+      height: $size_teacher
+      position: absolute
+      left: $padding_class
+      top: -$size_teacher/2
+      border-radius: 50%
+      background-image: url($url_teacher)
+      background-size: cover
+      border: solid 2px white
+      z-index: 1
+
+.top
+  height: $height_toppart
+  overflow: hidden
+  
+  .classPicture
+    width: 100%
+    height: 100%
+    position: absolute
+    background-image: url($url_class)
+    background-size: cover
+    transition: 0.3s
+    border-radius: 5px 5px 0px 0px
+
+  .tag
+    padding: 5px 0px
+    text-align: center
+    transform: rotate(45deg) translateX(80px) translateY(-60px)
+    background-color: $color_dark_orange
+    color: white
+    font-weight: 700
+    +box_shadow
+
+  .bookBtn
+    width: $size_bookbtn
+    height: $size_bookbtn
+    border-radius: 50%
+    position: absolute
+    left: $padding_class
+    bottom: -50px
+    background-color: #fff
+    cursor: pointer
+    transition: bottom 0.2s // 只針對bottom的改變去做漸變
+    +box_shadow
+    &:hover
+      background-color: $color_dark_orange
+      i
+        color: white
+    i
+      +ab_center
+      font-size: $size_icon
+      color: $color_dark_orange
+
+.bottom
+  height: $height_bottompart
+  padding: $padding_class
+
+  .classTitle
+    font-size: $size_title
+  
+  .text
+    font-size: $size_para
+    letter-spacing: 1px
+
+    .priceRow
+        margin-bottom: 10px
+        .lastDay
+          position: absolute
+          right: 0px
+          top: 0px
+
+    .progressBar
+      height: 10px
+      margin-bottom: 10px
+      background-color: darken($color_grey, 8)
+      border-radius: 5px
+      overflow: hidden
+
+      .valueBar
+        height: 100%
+        width: 150px
+        transition: 0.2s
+        background-color: $color_orange
+
+    .nowPeople
+        text-align: center
+    
+span.ora
+  padding-left: 5px
+  color: $color_orange
+
+.orangeBar
+  height: 10px
+  width: 100%
+  position: absolute
+  bottom: 0px
+  left: 0px
+  background-color: $color_dark_orange
+  border-radius: 0px 0px 5px 5px 

@@ -1,0 +1,266 @@
+html, body {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  background-color: #111111;
+}
+
+label {
+  cursor: pointer;
+}
+
+.daybox {
+  width: 450px;
+  height: 600px;
+  background-color: #111111;
+}
+.daybox:hover .bottom {
+  height: 120px;
+}
+.daybox:hover .day .weather {
+  top: -5%;
+  opacity: 1;
+}
+.daybox:hover .day:nth-child(1) .weather {
+  transition-delay: 0s;
+}
+.daybox:hover .day:nth-child(2) .weather {
+  transition-delay: 0.2s;
+}
+.daybox:hover .day:nth-child(3) .weather {
+  transition-delay: 0.4s;
+}
+.daybox:hover .day:nth-child(4) .weather {
+  transition-delay: 0.6s;
+}
+.daybox:hover .day:nth-child(5) .weather {
+  transition-delay: 0.8s;
+}
+.daybox:hover .day:nth-child(6) .weather {
+  transition-delay: 1s;
+}
+.daybox:hover .day:nth-child(7) .weather {
+  transition-delay: 1.2s;
+}
+
+.top {
+  border-radius: 10px 10px 0px 0px;
+  width: 100%;
+  height: 75%;
+  position: relative;
+  box-sizing: border-box;
+  background: linear-gradient(20deg, #4dacff, #1d678f);
+}
+
+.polyline {
+  stroke: black;
+  stroke-width: 0.5px;
+  fill: none;
+  opacity: 0.2;
+}
+.polyline circle {
+  fill: black;
+  opacity: 0.2;
+}
+.polyline text {
+  transform: translateX(-1px) translateY(10px);
+  font-size: 5px;
+  stroke: #111111;
+  font-weight: 200;
+  opacity: 0;
+  transition-duration: 2s;
+}
+
+.moon {
+  width: 15%;
+  height: 15%;
+  position: absolute;
+  top: 40%;
+  left: 10%;
+  border-radius: 100%;
+  box-shadow: 50% -50%;
+  animation: moonMove 20s infinite linear;
+  transition: 1s;
+}
+@keyframes moonMove {
+  0% {
+    transform: translateX(-40px) translateY(30px);
+    box-shadow: 40px -30px yellow;
+  }
+  100% {
+    transform: translateX(40px) translateY(-30px);
+    box-shadow: -40px 30px yellow;
+  }
+}
+
+.cloud {
+  width: 120px;
+  height: 40px;
+  position: absolute;
+  bottom: 20%;
+  left: 60%;
+  border-radius: 20px;
+  background-color: #ddd;
+  animation: cloudWave 10s infinite linear;
+  transition: 1s;
+}
+.cloud:before, .cloud:after {
+  position: absolute;
+  content: "";
+  display: block;
+  border-radius: 100%;
+  background-color: #ddd;
+}
+.cloud::before {
+  width: 50px;
+  height: 50px;
+  bottom: 60%;
+  left: 15%;
+}
+.cloud::after {
+  width: 45px;
+  height: 45px;
+  bottom: 45%;
+  left: 45%;
+}
+@keyframes cloudWave {
+  0% {
+    bottom: 18%;
+  }
+  50% {
+    bottom: 20%;
+  }
+  100% {
+    bottom: 18%;
+  }
+}
+
+.rain {
+  width: 1px;
+  height: 15px;
+  border: 2px solid #36b9c1;
+  background-color: #36b9c1;
+  position: absolute;
+  border-radius: 30%;
+  left: 20%;
+  animation: raindrop 1s infinite linear;
+}
+@keyframes raindrop {
+  0% {
+    top: 50%;
+    opacity: 0;
+  }
+  30% {
+    opacity: 1;
+  }
+  100% {
+    top: 180%;
+    opacity: 0;
+  }
+}
+.rain.rain2 {
+  left: 50%;
+  animation-delay: -0.3s;
+}
+.rain.rain3 {
+  left: 75%;
+  animation-delay: -0.6s;
+}
+
+.temp {
+  position: absolute;
+  bottom: 20%;
+  width: 40%;
+  height: 20%;
+  font-size: 60px;
+  text-align: center;
+}
+
+.info {
+  position: absolute;
+  bottom: 0%;
+  width: 40%;
+  height: 20%;
+  line-height: 5px;
+  text-align: center;
+}
+.info h4 {
+  font-weight: 300;
+}
+
+.bottom {
+  display: flex;
+  height: 10px;
+  justify-content: center;
+  background: linear-gradient(0deg, #a375a3, #f5dbf3);
+  overflow: hidden;
+  border-radius: 0px 0px 10px 10px;
+  transition-duration: 1s;
+}
+.bottom .day {
+  width: 60px;
+  height: 150px;
+  opacity: 1;
+}
+.bottom .day .weekDay {
+  position: relative;
+  width: 100%;
+  height: 30%;
+  top: 10px;
+  text-align: center;
+}
+.bottom .day .weather {
+  width: 100%;
+  height: 30%;
+  position: relative;
+  opacity: 0;
+  top: 10%;
+  transition-duration: 2s;
+  transition-delay: 0s;
+}
+.bottom .day .weather .cloud {
+  left: -35px;
+  transform: translateY(20px) scale(0.35);
+}
+.bottom .day .weather .cloud.suncloud {
+  transform: translateY(30px) scale(0.35);
+}
+.bottom .day .weather svg {
+  position: relative;
+  border-radius: 100%;
+  stroke: #111111;
+  stroke-width: 1px;
+}
+.bottom .day .weather svg.sun {
+  fill: #f8b806f8;
+  stroke-dasharray: 4.5px;
+  stroke: rgba(248, 184, 6, 0.4);
+  stroke-width: 30px;
+  animation: sunSpin 20s infinite linear;
+}
+@keyframes sunSpin {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+#switch {
+  display: none;
+}
+
+#switch:checked + .top .moon, #switch:checked + .top .cloud {
+  opacity: 0.2;
+}
+#switch:checked + .top .polyline {
+  opacity: 1;
+}
+#switch:checked + .top .polyline circle, #switch:checked + .top .polyline text {
+  opacity: 1;
+}

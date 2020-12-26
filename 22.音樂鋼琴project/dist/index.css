@@ -1,0 +1,167 @@
+body {
+  padding: 5%;
+  background-color: #eee;
+}
+
+#app {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+
+h1 {
+  margin-bottom: 30px;
+}
+
+.notations {
+  font-size: 20px;
+  text-align: center;
+}
+.notations .notation {
+  color: red;
+}
+.notations .change {
+  margin: 10px;
+}
+.notations .change button {
+  font-size: 10px;
+  margin-left: 10px;
+}
+.notations .choose {
+  display: inline-block;
+}
+.notations .choose input {
+  margin: 10px;
+  font-size: 20px;
+  border-radius: 5px;
+  background-color: #ffe;
+  color: #222;
+}
+
+.keyboard {
+  margin: 30px;
+  position: relative;
+}
+
+.record {
+  background-color: red;
+  color: white;
+  border-radius: 5px;
+  font-size: 20px;
+  padding: 3px;
+  text-align: center;
+  width: 100px;
+  position: absolute;
+  left: 40%;
+  top: -4%;
+  animation: blink 2s infinite;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.3;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.switch button {
+  margin-bottom: 5px;
+}
+
+.pianoKey {
+  box-shadow: 10px 10px 10px 0px rgba(0, 0, 0, 0.5);
+  display: inline-block;
+  position: relative;
+  vertical-align: top;
+  cursor: pointer;
+}
+.pianoKey .white {
+  border: solid 1px #aaa;
+  width: 44px;
+  height: 300px;
+  background-color: #fff;
+  position: relative;
+  transition: 0.1s;
+}
+.pianoKey .white:hover {
+  background-color: #eee;
+}
+.pianoKey .white span {
+  position: absolute;
+  left: 40%;
+  bottom: 0px;
+}
+.pianoKey .black {
+  border-top: solid 1px #222;
+  background-color: #222;
+  width: 22px;
+  height: 165px;
+  margin-left: -11px;
+  margin-right: -11px;
+  position: absolute;
+  transition: 0.1s;
+  z-index: 1;
+}
+.pianoKey .black:hover {
+  background-color: #777;
+}
+.pianoKey .black span {
+  left: 30%;
+  position: absolute;
+  bottom: 0px;
+  color: white;
+  z-index: 2;
+}
+
+.play {
+  text-align: center;
+}
+.play button {
+  margin: 10px;
+  border-radius: 5px;
+  font-size: 20px;
+  transition: 0.3s;
+}
+.play button:hover {
+  filter: invert(100%);
+}
+.play button i {
+  padding-right: 10px;
+}
+
+hr {
+  width: 100%;
+  border: 1px solid black;
+}
+
+.display span {
+  font-size: 30px;
+  margin-right: 10px;
+}
+.display button {
+  padding: 5px 10px;
+  font-size: 20px;
+  vertical-align: top;
+}
+
+ul.notes {
+  text-align: center;
+}
+ul.notes.none {
+  display: none;
+}
+ul.notes li {
+  padding: 10px;
+  width: 55px;
+  border-right: 1px solid #999;
+  font-weight: 300;
+  font-size: 20px;
+  display: inline-block;
+}
+ul.notes li.playing {
+  background-color: #ddd;
+}

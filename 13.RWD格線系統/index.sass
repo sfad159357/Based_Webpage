@@ -1,0 +1,87 @@
+// color
+$white: #f2f6f6
+$red: #e72243
+$yellow_light: #ecc339
+$yellow: #f5b132
+$cyan:#36b9c1
+$blue: #3344ff
+$grey:  #3e3a39
+$black:  #111111
+
+// font setting
+$font_base_size: 10px
+$font_family: 'Oswald', sans-serif
+$letter_spacing: 2px
+
+// max width
+$max_content_width: 768px
+
+// line width
+$base_line_width: 4px
+
+// break width
+$break_large: 1024px // 筆電
+$break_medium: 768px // 平板
+$break_small: 400px // 手機
+
+@mixin block($width:100px,$height:100px,$color:black)
+	width: $width
+	height: $height
+	border: solid 2px $color
+
+@mixin text($size:20px, $color:black, $spacing:2px)
+	font-size: $size
+	color: $color !important
+	letter-spacing: $spacing
+
+@mixin size($width, $height)
+	width: $width
+	height: $height
+
+@mixin fill
+	width: 100%
+	height: 100%
+
+@mixin center($left: 50%, $top: 50%, $X:-50%, $Y:-50%)
+	position: absolute
+	left: $left
+	top: $top
+	transform: translate($X, $Y)
+
+*
+
+html,body
+	+size(100%,100%)
+	background-color: #111
+	// display: flex
+	// flex-direction: column
+	// align-items: center
+	// justify-content: center
+
+div
+	position: relative
+
+.container.b
+	border: 1px solid white
+	color: $white
+
+hr
+	background-color: #fff
+
+h2
+	color: $white
+.row
+	color: $white
+	padding: 1px
+	margin: 0px
+
+.col-1
+	box-sizing: border-box
+	border-left: 1px solid white
+
+.block
+	border: 1px solid white
+
+.button
+	display: none
+	color: white

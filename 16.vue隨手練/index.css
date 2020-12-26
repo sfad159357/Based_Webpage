@@ -1,0 +1,31 @@
+html, body {
+  background-color: #111;
+  color: #f2f6f6;
+  padding: 1%;
+}
+
+div {
+  position: relative;
+}
+
+hr {
+  border: 1px solid white;
+}
+
+.big {
+  width: 100px;
+  height: 100px;
+  border: 1px solid white;
+}
+
+.mid {
+  width: 60px;
+  height: 60px;
+  border: 1px solid white;
+}
+
+.small {
+  width: 30px;
+  height: 30px;
+  border: 1px solid white;
+}

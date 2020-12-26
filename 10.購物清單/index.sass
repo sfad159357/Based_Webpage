@@ -1,0 +1,123 @@
+// color
+$white: #f2f6f6
+$red: #e72243
+$yellow_light: #ecc339
+$yellow: #f5b132
+$cyan:#36b9c1
+$blue: #3344ff
+$grey:  #3e3a39
+$black:  #111111
+
+// font setting
+$font_base_size: 10px
+$font_family: 'Oswald', sans-serif
+$letter_spacing: 2px
+
+// max width
+$max_content_width: 768px
+
+// line width
+$base_line_width: 4px
+
+// break width
+$large: 1024px // 筆電
+$medium: 768px // 平板
+$small: 400px // 手機
+
+@mixin block($width:100px,$height:100px,$color:black)
+	width: $width
+	height: $height
+	border: solid 2px $color
+
+@mixin text($size:20px, $color:black, $spacing:2px)
+	font-size: $size
+	color: $color !important
+	letter-spacing: $spacing
+
+@mixin size($width, $height)
+	width: $width
+	height: $height
+
+@mixin fill
+	width: 100%
+	height: 100%
+
+@mixin center($left: 50%, $top: 50%, $X:-50%, $Y:-50%)
+	position: absolute
+	left: $left
+	top: $top
+	transform: translate($X, $Y)
+
+html,body
+	+size(100%,100%)
+	background-color: #eee
+	display: flex
+	align-items: start
+	justify-content: center
+
+div
+	// border: 1px solid $black
+	position: relative
+
+.frame
+	margin-top: 5%
+	padding-bottom: 3%
+	background-color: #bffffd
+	border: 1px solid $black
+	box-shadow: 5px 5px 5px 
+.header
+	padding-top: 1px
+	border-bottom: 1px solid $black
+	background-color: #9fff8a
+	h1 
+		padding-left: 5%
+.input
+	display: inline-block
+	white-space: nowrap
+	padding: 5% 8%
+	input
+		width: 28%
+
+	label, input, .btn
+		display: inline-block
+.list
+	width: 90%
+	left: 5%
+	top: 2%
+	position: relative
+	border: none
+
+li
+	margin: 3%
+	padding: 2%
+	list-style: none
+	border: 1px solid $black
+	background-color: #fdff96
+	.name, .price, .delete
+		display: inline-block
+	.name
+		border: none
+	.price
+		position: absolute
+		right: 12%
+		padding: 2px
+		background-color: $yellow
+	.delete
+		position: absolute
+		padding: 2px
+		right: 4%
+		background-color: $red
+		color: $white
+		cursor: pointer
+		border: 1px solid $black
+		&:hover
+			background-color: #c40906
+
+.total
+	margin-top: 10%
+	margin-bottom: -2%
+	background-color: #fff
+	.price
+		font-weight: bold
+		background-color: $yellow_light
+		color: $black

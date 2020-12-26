@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Document
+        //- 注意！bootstrap的link要放在index.css的link上面，才不會覆蓋寫好的css
+        link(rel="stylesheet",href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css",integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2",crossorigin="anonymous")
+        link(rel="stylesheet", href="index.css")
+        link(href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet")
+        link(rel="stylesheet", href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css")
+
+    body
+        #app
+            h1 v-on呼叫/method寫function建立事件
+            button(v-on:click="add('pen')") +pen
+            button(v-on:click="add('apple')") +apple
+            button(v-on:click="add('pineapple')") +pineapple
+            br
+            h3 狀態:{{status}}
+            h4 列表總數：共{{fruits.length}}項
+            h4 共有{{counts.pen}}支筆
+                span /{{counts.apple}}顆蘋果
+                span /{{counts.pineapple}}顆鳳梨
+            .fruits(v-for="(fruit,id) in fruits")
+                .name {{id+1}}.{{fruit}}
+                img(v-if="fruit=='pen' " src="https://simpleicon.com/wp-content/uploads/pencil.png", alt="")
+                img(v-if="fruit=='apple' " src="https://simpleicon.com/wp-content/uploads/apple.png", alt="")
+                img(v-if="fruit=='pineapple'" src="https://image.flaticon.com/icons/png/512/52/52750.png", alt="")
+                button(v-on:click="remove(id, fruit)") X
+
+        //- 載入是有順序的，jquery -> popper.js -> bootstrap，最後才是我們的要載入的index.dev.js
+        //- 有些bootstrap的CSS有套一些jquery，所以必須引進這些script，像是navbar的toggler才能夠打開捲軸
+        script(src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous")
+        script(src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous")
+        script(src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous")
+        script(src="https://cdnjs.cloudflare.com/ajax/libs/skrollr/0.6.30/skrollr.min.js")
+        script(src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js")
+
+        script(src="index.dev.js")
+                
+                
+                    

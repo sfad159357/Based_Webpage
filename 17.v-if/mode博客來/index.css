@@ -1,0 +1,89 @@
+html, body {
+  background-color: #111;
+  color: #f2f6f6;
+  padding: 2%;
+}
+
+.bkl_icon {
+  width: 50px;
+}
+
+.book {
+  width: 185px;
+  padding: 10px;
+  text-align: center;
+  border: 1px solid #ddd;
+}
+.book img {
+  width: 100%;
+}
+
+.bookname {
+  font-size: 18px;
+  padding: 10px;
+  line-height: 25px;
+}
+.bookname a {
+  color: white;
+}
+
+h4 {
+  font-size: 16px;
+  font-weight: normal;
+  margin: 0px;
+  color: #ccc;
+  justify-content: end;
+}
+h4 a {
+  color: #ccc;
+}
+
+.red {
+  color: #d93800;
+  font-weight: 900;
+}
+
+.book {
+  display: grid;
+}
+.book img {
+  grid-row-start: 1;
+  grid-row-end: 5;
+}
+
+.book.detail {
+  display: block;
+  width: 80%;
+  text-align: left;
+}
+.book.detail img {
+  width: 20%;
+  display: inline-block;
+  vertical-align: middle;
+}
+.book.detail .info {
+  display: inline-block;
+  padding: 5%;
+  vertical-align: middle;
+}
+.book.detail .info .bookname {
+  padding: 0%;
+}
+
+.big {
+  width: 25%;
+}
+
+.detail.big .info {
+  width: 60%;
+}
+.detail.big img {
+  width: 30%;
+}
+.detail.big h4 {
+  line-height: 40px;
+}
+
+.detail.small .info {
+  width: 60%;
+}

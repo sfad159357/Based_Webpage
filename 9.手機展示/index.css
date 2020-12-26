@@ -1,0 +1,145 @@
+@charset "UTF-8";
+html, body {
+  width: 100%;
+  height: 100%;
+  background-color: #111111;
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+}
+
+.phone {
+  position: relative;
+  left: 0px;
+  width: 250px;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: #eee;
+  transition: 1s;
+  margin-top: 5%;
+}
+
+.top {
+  height: 50px;
+  position: relative;
+}
+.top .camera {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 100%;
+  background-color: #111111;
+}
+
+.screen {
+  height: 350px;
+  transition: 1s;
+  overflow: hidden;
+  cursor: pointer;
+  font-size: 0px;
+  white-space: nowrap;
+}
+.screen .page {
+  height: 100%;
+  width: 100%;
+  right: 0px;
+  padding: 10px;
+  box-sizing: border-box;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+  background-color: #eb9234;
+  font-size: 15px;
+}
+.screen .page h2 {
+  color: #f2f6f6;
+  margin: -2% 0px 15% 10px;
+}
+.screen .page .circle {
+  width: 300px;
+  height: 300px;
+  position: absolute;
+  border-radius: 100%;
+  bottom: -20%;
+  right: -30%;
+  background-color: #eba834;
+}
+.screen .page2::after, .screen .page3::after {
+  display: block;
+  padding: 10px;
+  box-sizing: border-box;
+  width: 100%;
+  height: 80%;
+  transform: translate(-4%, -10%);
+  background-color: #555;
+  content: "正如它的名字，這個屬性是用來控制空白字符的顯示的，同時還能控制是否自動換行。它有五個值：normal | nowrap | pre | pre-wrap | pre-line。因為默認是normal，所以我們主要研究下其它四種值時的展現情況。";
+  color: #f2f6f6;
+  line-height: 30px;
+  white-space: normal;
+  position: absolute;
+}
+.screen .page3::after {
+  content: "從這個名字可以知道，這個屬性是控制單詞如何被拆分換行的。它有三個值：normal | break-all | keep-all。";
+}
+
+.bottom {
+  height: 60px;
+  position: relative;
+}
+.bottom .home {
+  border: 1px solid #aaa;
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 100%;
+  color: #aaa;
+  text-align: center;
+  line-height: 40px;
+  cursor: pointer;
+}
+.bottom .home:hover {
+  background-color: #aaa;
+  color: #f2f6f6;
+}
+
+.text {
+  bottom: 22%;
+}
+
+.text, .phone_name {
+  color: #f2f6f6;
+  border: none;
+  margin: 10px 0px 0px 0px;
+  position: absolute;
+}
+
+.phone_name {
+  font-size: 30px;
+  font-weight: bold;
+  position: absolute;
+  bottom: 15%;
+}
+
+.buttons {
+  color: #f2f6f6;
+  cursor: pointer;
+  margin-top: 20px;
+  position: absolute;
+  bottom: 7%;
+}
+.buttons h5, .buttons h4 {
+  border: 1px solid;
+  display: inline-block;
+  padding: 10px 20px;
+  margin: 0px 10px 0px 0px;
+}
+.buttons h5:hover, .buttons h4:hover {
+  background-color: #eee;
+  color: #111111;
+}

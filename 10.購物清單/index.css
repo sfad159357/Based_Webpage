@@ -1,0 +1,92 @@
+html, body {
+  width: 100%;
+  height: 100%;
+  background-color: #eee;
+  display: flex;
+  align-items: start;
+  justify-content: center;
+}
+
+div {
+  position: relative;
+}
+
+.frame {
+  margin-top: 5%;
+  padding-bottom: 3%;
+  background-color: #bffffd;
+  border: 1px solid #111111;
+  box-shadow: 5px 5px 5px;
+}
+
+.header {
+  padding-top: 1px;
+  border-bottom: 1px solid #111111;
+  background-color: #9fff8a;
+}
+.header h1 {
+  padding-left: 5%;
+}
+
+.input {
+  display: inline-block;
+  white-space: nowrap;
+  padding: 5% 8%;
+}
+.input input {
+  width: 28%;
+}
+.input label, .input input, .input .btn {
+  display: inline-block;
+}
+
+.list {
+  width: 90%;
+  left: 5%;
+  top: 2%;
+  position: relative;
+  border: none;
+}
+
+li {
+  margin: 3%;
+  padding: 2%;
+  list-style: none;
+  border: 1px solid #111111;
+  background-color: #fdff96;
+}
+li .name, li .price, li .delete {
+  display: inline-block;
+}
+li .name {
+  border: none;
+}
+li .price {
+  position: absolute;
+  right: 12%;
+  padding: 2px;
+  background-color: #f5b132;
+}
+li .delete {
+  position: absolute;
+  padding: 2px;
+  right: 4%;
+  background-color: #e72243;
+  color: #f2f6f6;
+  cursor: pointer;
+  border: 1px solid #111111;
+}
+li .delete:hover {
+  background-color: #c40906;
+}
+
+.total {
+  margin-top: 10%;
+  margin-bottom: -2%;
+  background-color: #fff;
+}
+.total .price {
+  font-weight: bold;
+  background-color: #ecc339;
+  color: #111111;
+}
