@@ -1,4 +1,4 @@
-const hahowAPI = "http://awiclass.monoame.com/api/command.php?type=get&name=hahowdata"
+const hahowAPI = "https://awiclass.monoame.com/api/command.php?type=get&name=hahowdata"
 
 const vm = new Vue({
     el: "#app",
