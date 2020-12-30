@@ -2,7 +2,6 @@
 
 以下都是靜態網站，無後端作用，欲瀏覽各作品網頁：
 
-https://sfad159357.github.io/based_webpage/
 
 1.名片：
   運用基礎html, css來編制名片。
