@@ -8,10 +8,13 @@ _------ 基礎html, css操作-------_
 
 ## 1.名片：
   介紹：運用基礎html, css來編制個人名片。
+  
+  
   連結：https://sfad159357.github.io/based_webpage/1.名片/
   
 ## 2.個人履歷：
   介紹：運用基礎html, css來編制個人履歷。
+  
   連結：https://sfad159357.github.io/based_webpage/2.個人履歷/
 
 ## 3.色塊模組：
@@ -28,17 +31,19 @@ _------ 基礎html, css操作-------_
   
 ## 6.SVG動圖：
   介紹：使用html的svg向量元素製作5種不同的svg動畫，最後一張圖是需要滑鼠移上去才會顯示。
+  
   連結：https://sfad159357.github.io/based_webpage/6.SVG動圖/
   
 _------ 使用jade, sass預處理器 -------
 ## 7.天氣盒子：
   介紹：運用上述hover, keyframes, svg技巧來製作出如同手機的天氣app樣式。滑鼠移至介面上，會滑出一週天氣顯示；點擊介面，會顯示溫度折線圖。
+  
   連結：https://sfad159357.github.io/based_webpage/7.天氣盒子/
  
 _------ 載入jQuery -------
 ## 8.計數器：
   介紹：在html的script引入jQuery CDN，然後存取DOM文件中<div>num</div>元素節點，針對其元素內的數字增減進行if else判斷，來改變底下訊息css樣式。
-  `連結：https://sfad159357.github.io/based_webpage/8.計數器/`
+  連結：https://sfad159357.github.io/based_webpage/8.計數器/
  
 ## 9.手機展示：
   介紹：*1.透過點擊存取不同button中自製的屬性(data-width,data-height)，來改變手機css寬、高樣式。
