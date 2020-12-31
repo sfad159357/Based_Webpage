@@ -75,13 +75,13 @@
 
   連結：https://sfad159357.github.io/based_webpage/11.待辦清單/
  
-------- 以下都有用到RWD的功能 ---------
+## ------- 以下都有用到RWD的功能 ---------
 ### 12.RWD臉書排版：
   介紹：當螢幕寬度縮小至400px以下，大頭貼會從左側移動到螢幕中間位置。
   
   連結：https://sfad159357.github.io/based_webpage/12.RWD臉書排版/
   
------- 引入bootstrap網頁樣板 -----------
+## ------ 引入bootstrap網頁樣板 -----------
   
 ### 13.RWD隔線系統：
   介紹：透過bootstrap內建的格線樣板，.col-lg/md/sm-/1~12如此依照網頁寬度大小來排版。
@@ -90,29 +90,29 @@
   
 ### 14.格線圖形排版：
   介紹：
-  https://sfad159357.github.io/based_webpage/14.格線圖形排版/
+  連結：https://sfad159357.github.io/based_webpage/14.格線圖形排版/
   
 ### 15.RWD網頁排版：
-  https://sfad159357.github.io/based_webpage/15.RWD網頁排版/
+  連結：https://sfad159357.github.io/based_webpage/15.RWD網頁排版/
   
 ### 16.vue隨手練：
-   https://sfad159357.github.io/based_webpage/16.vue隨手練/
+  連結：https://sfad159357.github.io/based_webpage/16.vue隨手練/
    
 ### 17.v-if:
-   https://sfad159357.github.io/based_webpage/17.v-if/
+  連結：https://sfad159357.github.io/based_webpage/17.v-if/
    
 ### 18.v-on呼叫：
-   https://sfad159357.github.io/based_webpage/18.v-on呼叫/
+  連結：https://sfad159357.github.io/based_webpage/18.v-on呼叫/
    
 ### 19.vue-http:
-   https://sfad159357.github.io/based_webpage/19.vue-http/
+  連結：https://sfad159357.github.io/based_webpage/19.vue-http/
    
 ### 20.vue建立hahow網站：
-  https://sfad159357.github.io/based_webpage/20.vue建立hahow網站/
+  連結：https://sfad159357.github.io/based_webpage/20.vue建立hahow網站/
   
 ### 21.網頁製作：
-  https://sfad159357.github.io/based_webpage/21.網頁製作/
+  連結：https://sfad159357.github.io/based_webpage/21.網頁製作/
   
 ### 22.音樂鋼琴project:
-  https://sfad159357.github.io/based_webpage/22.音樂鋼琴project/
+  連結：https://sfad159357.github.io/based_webpage/22.音樂鋼琴project/
 
