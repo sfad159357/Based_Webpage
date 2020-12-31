@@ -76,6 +76,7 @@
   連結：https://sfad159357.github.io/based_webpage/11.待辦清單/
  
 ## ------- 以下都有用到RWD的功能 ---------
+
 ### 12.RWD臉書排版：
   介紹：當螢幕寬度縮小至400px以下，大頭貼會從左側移動到螢幕中間位置。
   
@@ -89,17 +90,25 @@
   連結：https://sfad159357.github.io/based_webpage/13.RWD格線系統/
   
 ### 14.格線圖形排版：
-  介紹：
+  介紹：利用bootstrap格線樣板將圖形排版。
+  
   連結：https://sfad159357.github.io/based_webpage/14.格線圖形排版/
   
 ### 15.RWD網頁排版：
+  介紹：<ol>1.利用bootstrap格線及導航列樣板來排版。</ol>
+       <ol>2.載入skrollr CDN，滾動時，標題會有緩慢移動及圖片縮放的效果</ol>
+       
   連結：https://sfad159357.github.io/based_webpage/15.RWD網頁排版/
-  
+ 
+## -------- 以下使用Vue框架 -------------
+
 ### 16.vue隨手練：
+  介紹：隨手操作vue功能。
   連結：https://sfad159357.github.io/based_webpage/16.vue隨手練/
    
 ### 17.v-if:
-  連結：https://sfad159357.github.io/based_webpage/17.v-if/
+  介紹：
+  連結：https://sfad159357.github.io/based_webpage/17.v-if/mode博客來
    
 ### 18.v-on呼叫：
   連結：https://sfad159357.github.io/based_webpage/18.v-on呼叫/
