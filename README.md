@@ -62,16 +62,16 @@
   連結：https://sfad159357.github.io/based_webpage/9.手機展示/
   
 ### 10.購物清單：
-  介紹：1.使用json物件建立採買清單，透過點擊「新增」按鈕，存取「產品名」及「價格」兩欄的值，並push到採買清單物件中的列表。
-       2.使用template string，來作為可帶入變數的string格式。
-       3.刪除清單項目，使用splice來裁切項目。
+  介紹：<ol>1.使用json物件建立採買清單，透過點擊「新增」按鈕，存取「產品名」及「價格」兩欄的值，並push到採買清單物件中的列表。</ol>
+       <ol>2.使用template string，來作為可帶入變數的string格式。</ol>
+       <ol>3.刪除清單項目，使用splice來裁切項目。</ol>
        
   連結：https://sfad159357.github.io/based_webpage/10.購物清單/
   
 ### 11.待辦清單：
-  介紹:1.比起直接建立json物件，這次利用jQuery中的$.ajax來請求外部網頁的json格式的data。
-      2.新增項目物件之屬性"done"，其值為boolean值，給予項目是否被完成的狀態。
-      3.透過checkbox的點擊，針對done屬性給予反向條件，再次呼叫清單列表getList()。
+  介紹:<ol>1.比起直接建立json物件，這次利用jQuery中的$.ajax來請求外部網頁的json格式的data。</ol>
+      <ol>2.新增項目物件之屬性"done"，其值為boolean值，給予項目是否被完成的狀態。</ol>
+      <ol>3.透過checkbox的點擊，針對done屬性給予反向條件，再次呼叫清單列表getList()。</ol>
 
   連結：https://sfad159357.github.io/based_webpage/11.待辦清單/
  
