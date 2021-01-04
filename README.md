@@ -125,12 +125,12 @@
 ### 18.v-on呼叫：
   介紹：透過vue的v-on來呼叫在vue引擎中所定義的method，進行參數的帶入，而新增或刪除data內的列表或物件資料。
   
-  特色：1.<ol>點擊按鈕帶入參數，修改原始data，可以將版面進行即時動態更新。
+  特色：1.點擊按鈕帶入參數，修改原始data，可以將版面進行即時動態更新。
        2.可以進行新增指定項目或針對某列的項目進行刪除。
        3.狀態同時顯示你做了哪個指令。
        4.同時顯示計算所有項目的總數，和分別計算各種項目的數量。
   
-  圖片：![avatar](/Users/chieng-ming-yen/Desktop/web_pic/18.v-on呼叫.png)
+  圖片：![img](/Users/chieng-ming-yen/Desktop/web_pic/18.v-on呼叫.png)
   
   連結：https://sfad159357.github.io/based_webpage/18.v-on呼叫/
    
