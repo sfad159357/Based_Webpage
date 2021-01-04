@@ -137,9 +137,20 @@
   連結：https://sfad159357.github.io/based_webpage/18.v-on呼叫/
    
 ### 19.vue-http:
+  介紹：之前載入外部資源是使用jQuery的ajax，這次採用載入vue-resource的CDN，透過vue引擎的$http中的http method，來載入外部資源。
+  
   連結：https://sfad159357.github.io/based_webpage/19.vue-http/
    
 ### 20.vue建立hahow網站：
+  介紹：透過vue引擎中的v-bind及method來自動帶入data，並加以設計。
+  
+  特色：<ol>1.透過vue-resource的$http存取外部資源，將data存在classes物件，再用v-for一一取出。</ol>
+       <ol>2.為了讓課程背景圖片的url或是其他原始參數是動態載入，使用v-bind。</ol>
+       <ol>3.由於參數會帶入字串內或計算，透過method來包裝程式碼，然後得到回傳值。</ol>
+       <ol>4.使用日期格式的相減，轉換成整數型態來呈現。
+  
+  網頁圖片：![img](20.vue建立hahow網站/20.png)
+
   連結：https://sfad159357.github.io/based_webpage/20.vue建立hahow網站/
   
 ### 21.網頁製作：
