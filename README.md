@@ -147,15 +147,31 @@
   特色：<ol>1.透過vue-resource的$http存取外部資源，將data存在classes物件，再用v-for一一取出。</ol>
        <ol>2.為了讓課程背景圖片的url或是其他原始參數是動態載入，使用v-bind。</ol>
        <ol>3.由於參數會帶入字串內或計算，透過method來包裝程式碼，然後得到回傳值。</ol>
-       <ol>4.使用日期格式的相減，轉換成整數型態來呈現。
+       <ol>4.使用日期格式的相減，轉換成整數型態來呈現。</ol>
   
   網頁圖片：![img](20.vue建立hahow網站/20.png)
 
   連結：https://sfad159357.github.io/based_webpage/20.vue建立hahow網站/
   
 ### 21.網頁製作：
+  介紹：沒有使用vue框架，單純用jQuery和bootstrap來存取DOM元素以及RWD排版。
+  
+  特色：<ol>1.導航列點選網頁區塊section，可以滑順地滾動，而非瞬間跳動。</ol>
+       <ol>2.首頁閃爍的explore字樣，一旦開始頁面捲動，會見便消失。</ol>
+       <ol>3.在"About"區塊內，存取window的滑鼠移動事件，一旦滑鼠移動，會有白色叉叉隨著滑鼠移動。</ol>
+       <ol>4.在"About"區塊內，透過計算鼠標離頁面的距離，右下角的貓的圖片會隨之變換。</ol>
+       <ol>5.除了採用bootstrap的格線排版和RWD設計，也另外使用@media screen來補足其他RWD效果。</ol>
+  
+  網頁圖片：![img](21.網頁製作/21.png)
+  
   連結：https://sfad159357.github.io/based_webpage/21.網頁製作/
   
 ### 22.音樂鋼琴project:
+  介紹：此專案採用vue引擎，較為複雜地去儲存data以及定義各種method進行對data的計算，使用者可以及時在網頁中的鋼琴上互動。
+  
+  特色：
+  
+  網頁圖片：![img](22.音樂鋼琴project/22.png)
+  
   連結：https://sfad159357.github.io/based_webpage/22.音樂鋼琴project/
 
