@@ -41,6 +41,7 @@
 ### 7.天氣盒子：
   介紹：運用上述hover, keyframes, svg技巧來製作出如同手機的天氣app樣式。滑鼠移至介面上，會滑出一週天氣顯示；點擊介面，會顯示溫度折線圖。
   
+  網頁圖片:![img](7.天氣盒子/7.png)
   
   連結：https://sfad159357.github.io/based_webpage/7.天氣盒子/
  
@@ -60,7 +61,8 @@
        <ol> 3.點擊手機螢幕可以使螢幕滑動，按首頁按鈕會跳回第一頁。</ol>
        <ol> 4.點擊按鈕都帶有音效。</ol>
        
-       
+  網頁圖片:![img](9.手機展示/9.png)
+  
   連結：https://sfad159357.github.io/based_webpage/9.手機展示/
   
 ### 10.購物清單：
@@ -68,6 +70,8 @@
   
   特色：<ol>1.使用template string，來作為可帶入變數的string格式。</ol>
        <ol>2.刪除清單項目，使用splice來裁切項目。</ol>
+       
+  網頁圖片:![img](10.購物清單/10.png)
        
   連結：https://sfad159357.github.io/based_webpage/10.購物清單/
   
@@ -77,6 +81,8 @@
   特色：<ol>1.比起直接建立json物件，這次利用jQuery中的$.ajax來請求外部網頁的json格式的data。</ol>
        <ol>2.新增項目物件之屬性"done"，其值為boolean值，給予項目是否被完成的狀態。</ol>
        <ol>3.透過checkbox的點擊，針對done屬性給予反向條件，再次呼叫清單列表getList()。</ol>
+       
+  網頁圖片：![img](11.待辦清單/11.png)
 
   連結：https://sfad159357.github.io/based_webpage/11.待辦清單/
  
@@ -171,7 +177,7 @@
   
   特色：<ol>1.將每個音階轉換成組成一個陣列soundPack_index，使用for迴圈建立soundPack陣列，每一項是個物件包含音階及其音源url，然後在html用v-for建立每一個音階的audio音樂播放器，</ol>
        <ol>2.在vue引擎建立playNote方法，輸入音階"id"，使用jQuery存取audio元素，就能播放指定音階的聲音。</ol>
-       <ol>3.訪客按下鋼琴上的鍵盤字母時，會存取window的keydown事件，再根據已輸入好的keyboard中音階對照ascii code，去對照初所按下的鍵盤，會連結到哪一個音階，並且撥放出來。<o/>
+       <ol>3.訪客按下鋼琴上的鍵盤字母時，會存取window的keydown事件，再根據已輸入好的keyboard中音階對照ascii code，去對照初所按下的鍵盤，會連結到哪一個音階，並且撥放出來。</ol>
        <ol>4.訪客可以選定現有的樂譜，底下樂譜鍵盤對照表會依據不同樂譜顯示出來，可以播放此樂譜的音樂，或是直接中斷。</ol>
        <ol>5.訪客可以新增自己想要的樂譜名稱，並且錄製下來。</ol>
        <ol>6.訪客可以針對現有的樂譜或錄製好樂譜更改樂譜名稱，或是可以直接刪除樂譜。</ol>
