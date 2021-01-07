@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+html(lang="en")
+head
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    title 5.RWD網頁製作
+    link(rel="preconnect" href="https://fonts.gstatic.com")
+    link(href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap" rel="stylesheet")
+    link(href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500&display=swap" rel="stylesheet")
+    link(href='https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css' rel='stylesheet')
+    link(rel="stylesheet", href="index.css")
+    link(rel="shortcut icon" href="#")
+body
+    nav.navbar.navbar-dark.navbar-expand-sm.bg-dark.fixed-top
+        .container-fluid
+            a.navbar-brand(href="header") Yellow Studio
+            button.navbar-toggler(type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation")
+                span.navbar-toggler-icon
+            #navbarNav.collapse.navbar-collapse
+                //- ml-auto使其置右
+                ul.navbar-nav.ml-auto
+                    li.nav-item.active
+                        a.nav-link(href='#section_about') ABOUT
+                    li.nav-item
+                        a.nav-link(href='#section_service') SERVICE
+                    li.nav-item
+                        a.nav-link(href='#section_works') WORKS
+                    li.nav-item
+                        a.nav-link(href='#section_contact') CONTACT
+
+
+    header#section_home
+        .container
+            img(src="https://awiclass.monoame.com/img/webpic/w_icon.svg", alt="")
+        .explore EXPLORE
+            span v
+            span v
+        img.bottom(src="https://awiclass.monoame.com/img/margin/m_index.svg", alt="")
+    
+    section#section_about
+        #cross
+        h2 About
+        .container
+            .row.row1
+                .col-sm-8.offset-4
+                    img.tri.tri1(src="https://awiclass.monoame.com/img/webpic/w_tri1.svg", alt="")
+                    h3.r1text WORKS IN YELLOW
+            .row.row1
+                .col-sm-4
+                    img.tri.tri2(src="https://awiclass.monoame.com/img/webpic/w_tri2.svg", alt="")
+                .col-sm-8
+                    img.tri.tri3(src="https://awiclass.monoame.com/img/webpic/w_tri3.svg", alt="")
+                    h4.r2text YELLOW STUDIO-Website Design / Development
+                    h4.r2text Interactive Art Design
+            .row.row1
+                .col-sm-8.offset-1
+                    h3.r3text 430 MORE SUCCESS CASES
+                .col-sm-4
+                    a.btn.btn-md.btn-info(href="#section_works") MORE STORY
+                .col-sm-8
+                    img.tri.tri4(src="https://awiclass.monoame.com/img/webpic/w_tri4.svg", alt="")
+                    img.tri.tri5(src="https://awiclass.monoame.com/img/webpic/w_tri5.svg" ,alt="")
+        img#cat(src="https://awiclass.monoame.com/catpic/cat_lefttop.png", alt="")
+    
+    section#section_service
+        img.margin_service(src="https://awiclass.monoame.com/img/margin/m_about.svg", alt="")
+        h2 Service
+        .allService
+            .service
+                img(src="https://awiclass.monoame.com/img/webpic/w_service_icon1.svg", alt="")
+                p CI/VI Desgin
+            .service
+                img(src="https://awiclass.monoame.com/img/webpic/w_service_icon2.svg", alt="")
+                p Motion Graphic
+            .service
+                img.service3(src="https://awiclass.monoame.com/img/webpic/w_service_icon3.svg", alt="")
+                p Web Design/Develop
+
+    section#section_works
+        h2 Works
+        .container
+            .row.row2
+                .col-sm-6.block 
+                    p 交大創業日 CIS/海報設計人群，每個人都是獨一無二的存在，而我們的構成又是生命歷程中所見所聞建構的，
+                .col-sm-6.block 
+                    .row.row2
+                        .col-12.col-sm-6.block2 
+                            p 動畫互動網頁程式入門
+                        .col-12.col-sm-6.block2 
+                            p DesigNAV 設計模組化 CIS
+                        .col-12.col-sm-6.block2 
+                            p 2016花旗聯合勸募官網
+                        .col-12.col-sm-6.block2 
+                            p Monoame Design 墨雨設計視覺
+    section#section_contact
+        img.margin_contact(src="https://awiclass.monoame.com/img/margin/m_works.svg", alt="")
+        h2 Contact
+        .row
+            .col-md-6
+                .block_form
+                    img#letter(src="https://awiclass.monoame.com/img/webpic/w_mail_cover.svg", alt="")
+                    form.form
+                        h4 Dear Yellow Studio,
+                        br
+                        label(for="name" ) Name:
+                        br
+                        input.input(type="text" name="name")
+                        br
+                        label(for="email" ) Email:
+                        br
+                        input.input(type="email" name="email")
+                        br
+                        label(for="content") Content:
+                        br
+                        textarea(name="content")
+                        br
+                        input.send(type="submit" value="send") 
+            .col-md-6.info
+                p If you have any question about us,<br>Don`t hestitate to contact us !
+                br
+                br
+                p#contact_info YELLOWSTUDIO@gmail.com<br>ADDRESS: TAIWAN, TAIPEI , XORO Road<br>Phone: 02-12345678
+    footer#footer
+        img.icon(src="https://awiclass.monoame.com/img/webpic/w_icon_black.svg")
+            
+    //-  載入是有順序的，jquery -> popper.js -> bootstrap，最後才是我們的要載入的index.dev.js
+        有些bootstrap的CSS有套一些jquery，所以必須引進這些script，像是navbar的toggler才能夠打開捲軸
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js")
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js')
+    script(src='https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js')
+    script(src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js")
+    script(src="https://cdn.jsdelivr.net/npm/vue-resource@1.5.1")
+    script(src="index.js")
