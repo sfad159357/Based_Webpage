@@ -49,7 +49,7 @@
 
   連結：https://sfad159357.github.io/Based_Webpage/4.待辦清單/
  
-## ------- 新增RWD的功能 ---------
+## ------- 新增RWD 4.1.3的功能 ---------
 
 ### 5.RWD網頁製作：
   介紹：沒有使用vue框架，單純用jQuery和bootstrap來存取DOM元素以及RWD排版。
